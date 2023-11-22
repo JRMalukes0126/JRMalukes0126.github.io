@@ -1,0 +1,768 @@
+@import url("https://fonts.googleapis.com/css2?family=poppings:wght@300,400,500,600,700,800,900&display=swap");
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:'poppins', sans-serif;
+}
+
+html, body{
+ 	/*background-color:#081b29;*/
+    color:#ededed;
+
+}
+.weather{
+    color: #081b29;
+}
+.header
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+    width: 100%;
+	padding: 20px 10%;
+	background: transparent;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+.logo
+{
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+.navbar a 
+{
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 3s;
+}
+.navbar a:hover
+.navbar a:active
+{
+    color: #00abf0;
+}
+.logo::before
+{
+    content: '';
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+
+
+}
+.content p 
+{
+font-size: 18px;
+color:#ededed;
+text-decoration: none;
+font-weight: 500;
+margin-left: 35px;
+transition: .3s;
+}
+section
+{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+.home
+{
+    height: 100vh;
+    background: url('jnr.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.home-content
+{
+    max-width: 600px;
+}
+.home-content h1
+{
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.home-content h1::before
+{
+    content: '';
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+
+
+}
+.home-content h3
+{
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color:#00abf0;
+}
+.home-content h3::before
+{
+    content: '';
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+
+
+}
+.home-content p
+{
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+.home-content p::before
+{
+    content: '';
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+
+
+}
+.home-content .button
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+.home-content .button::before
+{
+    content: '';
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+
+
+}
+.button a
+{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color:#081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 5s;
+}
+.button a:hover
+{
+    color: #00abf0;
+}
+.button a:nth-child(2) 
+{
+    background : transparent;
+    color:#00abf0;
+}
+.button a:nth-child(2):hover
+{
+    color: #081b29;
+ 
+}
+.button a:nth-child(2)::before
+{
+    background : #00abf0;
+ 
+}
+.button a::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+.button a:hover::before
+{
+    width: 100%;
+}
+.home-sci
+{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+.home-sci::before
+{
+    content: '';
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 2;
+
+}
+.home-sci a 
+{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.home-sci a:hover{
+    color: #081b29;
+}
+
+.home-sci a::before
+{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 0%;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+.home-sci a:hover::before
+{
+    width: 100%;
+}
+.home-imghover
+{
+    position: absolute;
+    top: 0%;
+    right: 30px;
+    width: 500px;
+    height: 100px;
+    background: transparent;
+    transition: 3s;
+    animation: manipActiveHover .1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+}
+.home-imghover :hover
+{
+    background: #081b29;
+    opacity: .8;
+}
+.home-imghover::after
+{
+    content: '';
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 120%;
+    height: 100%;
+    background: #00abf0;
+    animation: showRight 1s ease forwards;
+    animation-delay: 3s;
+    z-index: 100;
+
+
+}
+.Personal 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: #081b29;
+    padding-bottom: 6rem;
+
+}
+
+.heading {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.About {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: #081b29;
+    padding-bottom: 6rem;
+}
+.heading {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+span {
+    color: #00abf0;
+}
+.About-img {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.About-img img {
+    width: 90%;
+    height: 90%;
+    border-radius: 100%;
+    border: .2rem solid #00abf0;
+}
+.About-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid #081b29;
+    border-bottom: .2rem solid #081b29;
+    border-left: .2rem solid #00abf0;
+    border-right: .2rem solid #00abf0;
+}
+.About-content {
+    text-align: center;
+}
+.About-content h3 {
+    font-size: 2.6rem;
+}
+.About-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+/*.Personal-img {
+    position: relative;
+    width: .5rem;
+    height: .5rem;
+    background: url(jrh.jpeg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Personal-img img 
+{
+    width: 90% ;
+    border-radius: 50%;
+    border: .2rem solid #00abf0;
+
+}
+.Personal-img .circle-spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid #00abf0;
+    border-bottom: .2rem solid #00abf0;
+    border-left: .2rem solid #081b29;
+    border-right: .2rem solid #081b29;
+
+}
+.Personal-content{
+    text-align: center;
+}
+.Personal-content h3{
+    font-size: 2.6rem;
+}
+.Personal-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}*/
+.btn-box .btn
+{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color:#081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 5s;
+}
+.btn-box .btn:hover
+{
+    color: #00abf0;
+}
+.btn-box .btn:nth-child(2) 
+{
+    background : transparent;
+    color:#00abf0;
+}
+.btn-box .btn:nth-child(2):hover
+{
+    color: #081b29;
+ 
+}
+.btn-box .btn:nth-child(2)::before
+{
+    background : #00abf0;
+ 
+}
+.btn-box .btn::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+.btn-box .btn:hover::before
+{
+    width: 100%;
+}
+/*.btn-box .btns{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color:#081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 5s;
+}
+.btn-box .btns
+{
+    
+    display: inline-block;
+    width: 15rem;
+    
+}
+.btn-box .btns a:hover:before{
+    background: #081b29;
+}*/
+.Educational{
+    display: flex;
+    justify-content: center;
+    background: #081b29;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+.Educational .Education-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+.Education-row .Education-column {
+    flex: 1 1 40rem;
+}
+.Education-column .title {
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 2rem;
+}
+.Education-column .Education-box {
+    border-left: .2rem solid #00abf0;
+}
+.Education-box .Education-content {
+    position: relative;
+    padding-left: 2rem;
+}
+.Education-box .Education-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: #00abf0;
+    border-radius: 50%;
+}
+.Education-content .content {
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid #00abf0;
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+.Education-content .content::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.Education-content .content:hover::before{
+    width: 100%;
+}
+.Education-content .content .year {
+    font-size: 1.5rem;
+    color: #00abf0;
+    padding-bottom: .5rem;
+}
+.Education-content .content .year i {
+    padding-right: .5rem;
+}
+.Education-content .content h3 {
+    font-size: 2rem;
+}
+.Education-content .content p {
+    font-size: 1.6rem;
+    padding-top: .5rems;
+}
+.Skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+.Skills .Skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+.Skills-row .Skills-column {
+    flex: 1 1 40rem;
+}
+.Skills-column .title {
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+}
+.Skills-column .Skills-box {
+    border-left: .2rem solid #00abf0;
+}
+.Skills-box .Skills-content {
+    position: relative;
+    border: .2rem solid #00abf0;
+    border-radius: .5rem .5rem 1.5rem;
+    padding-left: 2rem;
+}
+.Skills-box .Skills-content::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+
+}
+.Skills-box .Skills-content:hover::before{
+    width: 100%;
+}
+.Skills-content .content {
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid #00abf0;
+    background: #081b29;
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+}
+/*.Profession{
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: #081b29;
+}
+.Profession{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+.Profession .Profession-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+.Profession-row .Profession-column {
+    flex: 1 1 40rem;
+}
+.Profession-column .title {
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 2rem;
+}
+.Profession-column .Profession-box {
+    border-left: .2rem solid #00abf0;
+}
+.Profession-box .Profession-content {
+    position: relative;
+    padding-left: .5rem 1.5rem;
+    border: .2rem solid #00abf0;
+    border-radius: .6rem;
+    z-index: 1;
+    overflow: hidden;
+}
+.Profession-box .Profession-content::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+.Profession-box .Profession-content:hover::before{
+    width: 100%;
+}
+.Profession-content .content {
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid #00abf0;
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+}*/
+.Skills-content .progress
+{
+    padding: 1rem 0 ;
+}
+.Skills-content .progress h3 {
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Skills-content .progress h3 span {
+    color: #00abf0;
+}
+.Skills-content .progress .bar {
+    height: 2.5rem;
+    border-radius: .6rem;
+    border: .2rem solid #00abf0;
+    padding: .5rem;
+    margin: 1rem 0;
+}
+.Skills-content .progress .bar span {
+    display: block;
+    height: 100%;
+    border-radius: .3rem;
+    background: #00abf0;
+}
+.Skills-column:nth-child(1) .Skills-content .progress:nth-child(1) .bar span{
+    width: 90%;
+}
+.Skills-column:nth-child(1) .Skills-content .progress:nth-child(2) .bar span{
+    width: 80%;
+}
+.Skills-column:nth-child(1) .Skills-content .progress:nth-child(3) .bar span{
+    width: 65%;
+}
+.Profession-column:nth-child(1) .Profession-content .progress:nth-child(4) .bar span{
+    width: 95%;
+}
+.Profession-column:nth-child(1) .Profession-content .progress:nth-child(5) .bar span{
+    width: 90%;
+}
+.Profession-column:nth-child(1) .Profession-content .progress:nth-child(6) .bar span{
+    width: 65%;
+}
+.Profession-column:nth-child(1) .Profession-content .progress:nth-child(7) .bar span{
+    width: 79%;
+}
+
+/*KEYFRAME ANIMATION*/
+@keyframes showRight {
+    100%{
+        width: 0;
+    }
+}
+@keyframes manipActiveHover{
+    100%{
+        pointer-events: auto;
+    }
+}
