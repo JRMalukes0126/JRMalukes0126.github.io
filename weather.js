@@ -1,33 +1,58 @@
-function getWeather() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showWeather, showError);
+document.addEventListener('DOMContentLoaded', function () {
+    
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+       
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+  
+       
+        getWeather(latitude, longitude);
+      }, function (error) {
+       
+        console.error('Error getting location:', error.message);
+        displayWeatherError();
+      });
     } else {
-        alert('Geolocation is not supported by this browser.');
+     
+      console.error('Geolocation is not supported.');
+      displayWeatherError();
     }
-}
-
-function showWeather(position) {
-    const apiKey = 'f9349e13ca8f001ba306eda872cbc8a4';
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-    const weatherUrl = https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey};
-
-    fetch(weatherUrl)
-        .then(response => response.json())
-        .then(data => {
-            const temperature = data.main.temp -273.15;
-            const weatherDescription = data.weather[0].description;
-
-            const locationDataElement = document.getElementById('location-data');
-            locationDataElement.innerHTML = `<p>Your location: Latitude ${latitude}, Longitude ${longitude}</p>
-                                            <p>Temperature: ${temperature.toFixed(1)}°C</p>
-                                            <p>Weather: ${weatherDescription}</p>`;
-        })
-        .catch(error => {
-            console.error('Error fetching weather data:', error);
-        });
-}
-
-function showError(error) {
-    // Handle geolocation errors (same as in the previous example)
-}
+  });
+  
+  function getWeather(latitude, longitude) {
+   
+    const apiKey = '35dd10301ced943c9012f946d0184608';
+    const apiUrl = https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric;
+  
+   
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        
+        displayWeather(data);
+      })
+      .catch(error => {
+        
+        console.error('Error fetching weather data:', error.message);
+        displayWeatherError();
+      });
+  }
+  
+  function displayWeather(weatherData) {
+    const weatherInfoElement = document.getElementById('weather-info');
+  
+    
+    const temperature = weatherData.main.temp;
+    const description = weatherData.weather[0].description;
+    const location = weatherData.name;
+  
+    const weatherText = Current weather in ${location}: ${temperature}°C, ${description}.;
+  
+    weatherInfoElement.textContent = weatherText;
+  }
+  
+  function displayWeatherError() {
+    const weatherInfoElement = document.getElementById('weather-info');
+    weatherInfoElement.textContent = 'Unable to fetch weather information.';
+  }
