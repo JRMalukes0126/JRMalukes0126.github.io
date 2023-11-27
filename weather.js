@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
   function getWeather(latitude, longitude) {
    
-    const apiKey = '4ed7813f13eb7d95455c31232be1c87d';
+    const apiKey = '3aa516bb406a24e62935ee8df4256ac3';
     const apiUrl = https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric;
   
    
