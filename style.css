@@ -625,6 +625,13 @@ span {
 .contact form .btn-box.btns .btn {
     cursor: pointer;
 }
+.weather {
+	font-size: 20px;
+	width: 100%;
+	height: 20%;
+	backround: #00abf0;
+	color: #ededed;
+}
 @media (max-width: 1200px){
     html {
         font-size: 55%;
